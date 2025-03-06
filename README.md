@@ -1,0 +1,1 @@
+User Experience Questionnaire is a fast and reliable questionnaire to measure the User Experience of interactive products. The scales of the questionnaire cover a comprehensive impression of user experience. Both classical usability aspects (efficiency, perspicuity, dependability) and user experience aspects (originality, stimulation) are measured.
