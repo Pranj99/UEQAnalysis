@@ -13,15 +13,16 @@ def plot_dimension_scores(mean_scores):
     plt.xlabel("UEQ Dimensions")
     plt.ylabel("Mean Score")
     plt.title("Mean Scores for UEQ Dimensions")
-    plt.ylim(1, 7)  # UEQ scores range from 1 to 7
+    plt.ylim(-3, 3)  # UEQ scores range from 1 to 7
     plt.show()
 
 def plot_item_means(item_stats):
     """
     Plot the mean value per item.
     """
+    colors = ['blue' if i < 4 else 'red' for i in range(len(item_stats))]
     plt.figure(figsize=(10, 6))
-    plt.bar(item_stats['Item'], item_stats['Mean'], color='skyblue')
+    plt.bar(item_stats['Item'], item_stats['Mean'], color=colors)
     plt.xlabel('Item')
     plt.ylabel('Mean Value')
     plt.title('Mean Value per Item')

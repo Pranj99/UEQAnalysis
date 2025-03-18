@@ -3,9 +3,9 @@ import pandas as pd
 
 def calculate_mean_scores(data):
     """
-    Calculate the mean scores for each UEQ dimension
-    
+    Calculate the mean scores for each UEQ dimension and return them in a DataFrame format.
     """
+    # Define the questions associated with each dimension
     dimensions = {
         "Attractiveness": ["Q1", "Q2"],
         "Perspicuity": ["Q3", "Q4"],
@@ -13,9 +13,15 @@ def calculate_mean_scores(data):
         "Dependability": ["Q7", "Q8"]
     }
 
+    # Initialize a dictionary to store the mean scores
     mean_scores = {}
+
+    # Loop through each dimension and calculate the mean score
     for dimension, questions in dimensions.items():
         mean_scores[dimension] = data[questions].mean(axis=1).mean()
+
+    # Convert the mean scores dictionary to a DataFrame
+    # mean_scores_df = pd.DataFrame(list(mean_scores.items()), columns=["Dimension", "Mean Score"])
 
     return mean_scores
 
