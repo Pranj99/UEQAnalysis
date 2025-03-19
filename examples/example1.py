@@ -6,20 +6,16 @@ from UEQanalyzer.analysis import transform_and_calculate_scales, calculate_item_
 # Load data
 data = load_ueq_data("ueq_data.xlsx")
 
-# Calculate mean scores
-# mean_scores = calculate_mean_scores(data)
-# print("Mean Scores:", mean_scores)
-
 transformed_data = transform_and_calculate_scales(data)
 # Display the results
 print(transformed_data)
 
 # Calculate mean scores
 mean_scores = calculate_mean_scores(transformed_data)
-print("Mean Scores:")
+print("Mean Scores:") 
 print(mean_scores)
 
-# Plot dimension scores
+# Plot mean scores
 plot_dimension_scores(mean_scores)
 
 # Calculate item statistics
@@ -38,4 +34,5 @@ print(scale_means)
 # Plot scale means
 plot_scale_means(scale_means)
 
+# Plot benchmark
 plot_scale_means_with_benchmark(scale_means)
