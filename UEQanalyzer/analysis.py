@@ -15,7 +15,6 @@ def calculate_mean_scores(data):
 
     # Initialize a dictionary to store the mean scores
     mean_scores = {}
-
     # Loop through each dimension and calculate the mean score
     for dimension, questions in dimensions.items():
         mean_scores[dimension] = data[questions].mean(axis=1).mean()
@@ -25,28 +24,28 @@ def calculate_mean_scores(data):
 
     return mean_scores
 
-def analyze_dimensions(data):
-    """
-    Perform a detailed analysis of UEQ dimensions (short version).
-    """
-    dimensions = {
-        "Attractiveness": ["Q1", "Q2"],
-        "Perspicuity": ["Q3", "Q4"],
-        "Efficiency": ["Q5", "Q6"],
-        "Dependability": ["Q7", "Q8"]
-    }
+# def analyze_dimensions(data):
+#     """
+#     Perform a detailed analysis of UEQ dimensions (short version).
+#     """
+#     dimensions = {
+#         "Attractiveness": ["Q1", "Q2"],
+#         "Perspicuity": ["Q3", "Q4"],
+#         "Efficiency": ["Q5", "Q6"],
+#         "Dependability": ["Q7", "Q8"]
+#     }
 
-    results = []
-    for dimension, questions in dimensions.items():
-        dimension_data = data[questions]
-        results.append({
-            "Dimension": dimension,
-            "Mean": dimension_data.mean().mean(),
-            "Median": dimension_data.median().median(),
-            "Std Dev": dimension_data.std().mean()
-        })
+#     results = []
+#     for dimension, questions in dimensions.items():
+#         dimension_data = data[questions]
+#         results.append({
+#             "Dimension": dimension,
+#             "Mean": dimension_data.mean().mean(),
+#             "Median": dimension_data.median().median(),
+#             "Std Dev": dimension_data.std().mean()
+#         })
 
-    return pd.DataFrame(results)
+#     return pd.DataFrame(results)
 
 def transform_and_calculate_scales(data):
     """
