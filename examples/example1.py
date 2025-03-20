@@ -1,5 +1,4 @@
 from UEQanalyzer.data_loader import load_ueq_data
-from UEQanalyzer.analysis import analyze_dimensions
 from UEQanalyzer.visualization import plot_dimension_scores, plot_item_means, plot_scale_means, plot_scale_means_with_benchmark
 from UEQanalyzer.analysis import transform_and_calculate_scales, calculate_item_statistics, calculate_scale_means, calculate_mean_scores
 

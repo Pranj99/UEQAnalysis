@@ -1,10 +1,20 @@
-import unittest
+# tests/test_data_loader.py
+import pytest
 import pandas as pd
 from UEQanalyzer.data_loader import load_ueq_data
 
-class TestDataLoader(unittest.TestCase):
-    def test_load_ueq_data(self):
-        # Test loading a sample Excel file
-        data = load_ueq_data("sample_data.xlsx")
-        self.assertIsInstance(data, pd.DataFrame)
-        self.assertFalse(data.empty)
+def test_load_ueq_data_success():
+    """Test loading a valid Excel file."""
+    file_path = "ueq_data.xlsx"  
+    data = load_ueq_data(file_path)
+    assert isinstance(data, pd.DataFrame), "Expected a DataFrame"
+    assert not data.empty, "DataFrame should not be empty"
+  
+def test_load_ueq_data_invalid_file():
+    """Test loading an invalid file."""
+    file_path = "invalid_data.txt"  
+    data = load_ueq_data(file_path)
+    assert data is None, "Expected None for invalid file"
+
+test_load_ueq_data_success()
+test_load_ueq_data_invalid_file()
