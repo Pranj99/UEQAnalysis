@@ -35,6 +35,7 @@ setup(
             "ueqanalyzer=cli:main",  # Correct entry point for cli.py at the root
         ],
     },
+    scripts=["cli.py"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
