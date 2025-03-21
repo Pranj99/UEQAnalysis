@@ -44,12 +44,35 @@ mean_scores = calculate_mean_scores(data)
 # Plot dimension scores
 plot_dimension_scores(mean_scores)
 ```
-Command-Line Interface (CLI)
+## Command-Line Interface (CLI)
+
 You can also use the UEQanalyzer CLI to analyze and visualize UEQ data:
 
+**Basic Usage**
+
+To analyze UEQ data and display results in the terminal:
+```bash
+ueqanalyzer -i ueq_data.xlsx
+```
+**Save Results to a CSV File**
+
+To save the analysis results to a CSV file:
+```bash
+ueqanalyzer -i ueq_data.xlsx -o results.csv
+```
+**Generate and Display Plots**
+
+To generate and display plots for UEQ dimensions, item means, and scale means:
+```bash
+ueqanalyzer -i ueq_data.xlsx -p
+```
+**Save Results and Generate Plots**
+
+To save the results to a CSV file and generate plots:
 ```bash
 ueqanalyzer -i ueq_data.xlsx -o results.csv -p
 ```
+
 - -i: Path to the input Excel file containing UEQ data.
 
 - o: Path to save the analysis results (optional).
