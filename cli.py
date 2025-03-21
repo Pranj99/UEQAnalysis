@@ -10,6 +10,7 @@ from UEQanalyzer.analysis import (
 from UEQanalyzer.visualization import (
     plot_dimension_scores,
     plot_item_means,
+    plot_scale_means,
     plot_scale_means_with_benchmark,
 )
 
@@ -81,6 +82,7 @@ def main():
         print("Generating plots...")
         plot_dimension_scores(mean_scores)
         plot_item_means(item_stats)
+        plot_scale_means(scale_means)
         plot_scale_means_with_benchmark(scale_means)
 
 if __name__ == "__main__":
