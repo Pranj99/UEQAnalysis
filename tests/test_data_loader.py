@@ -16,5 +16,3 @@ def test_load_ueq_data_invalid_file():
     data = load_ueq_data(file_path)
     assert data is None, "Expected None for invalid file"
 
-test_load_ueq_data_success()
-test_load_ueq_data_invalid_file()
