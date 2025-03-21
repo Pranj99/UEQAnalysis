@@ -6,14 +6,11 @@ This script demonstrates how to:
 2. Perform basic analysis (mean scores, item statistics, scale means).
 3. Generate visualizations (dimension scores, item means, scale means with benchmarks).
 4. Handle edge cases (missing data, invalid files).
-5. Customize plots (titles, colors).
+
 
 How to Run the Examples:
 1. Ensure the `ueq_data.xlsx` file is in the same directory as this script.
-2. Run the script using:
-   ```bash
-   python examples.py
-3.Follow the printed instructions and view the generated plots.
+2. Follow the printed instructions and view the generated plots.
 """
 
 from UEQanalyzer.data_loader import load_ueq_data
