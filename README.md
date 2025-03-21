@@ -19,7 +19,7 @@ This package provides tools to:
 You can install **UEQanalyzer** using `pip`:
 
 ```bash
-pip install UEQanalyzer
+pip install UEQanalyzer==0.1.0
 ```
 Alternatively, you can install it directly from the source:
 ```bash
