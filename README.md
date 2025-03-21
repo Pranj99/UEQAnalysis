@@ -20,17 +20,17 @@ You can install **UEQanalyzer** using `pip`:
 
 ```bash
 pip install UEQanalyzer
-
+```
 Alternatively, you can install it directly from the source:
-
+```bash
 git clone https://github.com/Pranj99/UEQAnalysis.git
 cd UEQAnalysis
 pip install .
-
-Usage
+```
+## Usage
 Basic Usage
 Here’s an example of how to use UEQanalyzer to analyze and visualize UEQ data:
-
+```bash
 from UEQanalyzer.data_loader import load_ueq_data
 from UEQanalyzer.analysis import calculate_mean_scores
 from UEQanalyzer.visualization import plot_dimension_scores
@@ -43,26 +43,26 @@ mean_scores = calculate_mean_scores(data)
 
 # Plot dimension scores
 plot_dimension_scores(mean_scores)
-
+```
 Command-Line Interface (CLI)
 You can also use the UEQanalyzer CLI to analyze and visualize UEQ data:
 
-bash
-Copy
+```bash
 ueqanalyzer -i ueq_data.xlsx -o results.csv -p
--i: Path to the input Excel file containing UEQ data.
+```
+- -i: Path to the input Excel file containing UEQ data.
 
--o: Path to save the analysis results (optional).
+- o: Path to save the analysis results (optional).
 
--p: Generate and display plots for UEQ dimensions.
+- p: Generate and display plots for UEQ dimensions.
 
-Examples
+## Examples
 For more detailed examples, check out the examples/ directory in the repository. The examples demonstrate:
 
-Loading and preprocessing UEQ data.
+- Loading and preprocessing UEQ data.
 
-Calculating mean scores and item statistics.
+- Calculating mean scores and item statistics.
 
-Generating visualizations.
+- Generating visualizations.
 
-Handling edge cases (e.g., invalid files, missing data).
+- Handling edge cases (e.g., invalid files, missing data).
